@@ -4,8 +4,8 @@
 ## Prerequisites
 Before you can use the API, you need the following:
 
-Node.js (v14 or higher)
-MySQL (for the database)
+Node.js (v14 or higher)<br>
+MySQL (for the database)<br>
 Installation
 Clone this repository to your local machine:
 
