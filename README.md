@@ -117,6 +117,41 @@ Copy code<br>
   "description": "Updated Post Description",
   "images": ["updated_image.jpg"]
 }<br>
+
+## 6. Get All Posts of a Specific User
+Endpoint: GET /api/users/:userId/posts <br>
+Description: Fetch all posts for a specific user by their userId.<br>
+Response:<br>
+json<br>
+Copy code<br>
+[
+  {
+    "id": 1,
+    "title": "Post 1 by User",
+    "description": "Description of the first post",
+    "images": ["image1.jpg", "image2.jpg"],
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "JohnDoe",
+      "email": "john@example.com"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Post 2 by User",
+    "description": "Description of the second post",
+    "images": ["image3.jpg"],
+    "userId": 1,
+    "user": {
+      "id": 1,
+      "username": "JohnDoe",
+      "email": "john@example.com"
+    }
+  }
+]<br>
+Description: Fetch all posts for a given user. You need to provide the userId of the user whose posts you want to fetch.<br>
+
 ## 5. Delete a Post
 Method: DELETE<br>
 
@@ -146,6 +181,7 @@ Get All Posts: GET ```http://localhost:3000/api/posts```<br>
 Create a Post: POST ```http://localhost:3000/api/users/:userId/posts```<br>
 Edit a Post: PUT ```http://localhost:3000/api/posts/:id```<br>
 Delete a Post: ```DELETE http://localhost:3000/api/posts/:id```<br>
+Get Post of Specific User: GET ```http://localhost:3000/api/users/1/posts```<br>
 ## Error Handling<br>
 The API returns appropriate HTTP status codes and error messages for failed requests.<br>
 
