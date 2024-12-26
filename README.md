@@ -11,8 +11,8 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone <[your-repository-url](https://github.com/Shubhamindev/Micro-Instagram)>
-cd chefkart
+```git clone https://github.com/Shubhamindev/Micro-Instagram)```
+``` cd chefkart  ```
 Install dependencies:
 
 bash
