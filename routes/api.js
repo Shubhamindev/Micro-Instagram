@@ -1,5 +1,6 @@
 const express = require('express');
 const { User, Post } = require('../models'); // Import models
+const user = require('../models/user');
 const router = express.Router();
 
 // Route to get all users
@@ -43,39 +44,51 @@ router.post('/users/:userId/posts', async (req, res) => {
   
 
 // Route to edit a post
-router.put('/posts/:id', async (req, res) => {
-  const { id } = req.params;
-  const { title, description, images } = req.body;
-
-  try {
-    const post = await Post.findByPk(id);
-    if (!post) {
-      return res.status(404).json({ message: 'Post not found' });
-    }
-
-    await post.update({ title, description, images });
-    res.json(post);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-// Route to get all posts of a specific user
-router.get('/users/:userId/posts', async (req, res) => {
-    const { userId } = req.params; // Get user ID from URL parameter
+router.put('/users/:userId/posts', async (req, res) => {
+    const { userId } = req.params;
+    const { title, description, images } = req.body;
   
     try {
-      // Find posts for the specific user
-      const posts = await Post.findAll({
-        where: { userId }, // Find posts with the matching userId
-        include: [{ model: User, as: 'user' }], // Include user data (optional)
+      
+      const user = await User.findByPk(userId);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+
+      const post = await Post.findOne({
+        where: { userId },
+        order: [['createdAt', 'DESC']] 
       });
   
-      // If no posts are found, send an empty array
+      if (!post) {
+        return res.status(404).json({ message: 'No posts found for this user' });
+      }
+  
+      
+      await post.update({ title, description, images });
+      res.json(post);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+  
+
+// Route to get all posts of a specific user
+router.get('/users/:userId/posts', async (req, res) => {
+    const { userId } = req.params; 
+  
+    try {
+      
+      const posts = await Post.findAll({
+        where: { userId }, 
+        include: [{ model: User, as: 'user' }], 
+      });
+  
       if (posts.length === 0) {
         return res.status(404).json({ message: 'No posts found for this user' });
       }
   
-      // Return the list of posts
       res.json(posts);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -83,20 +96,33 @@ router.get('/users/:userId/posts', async (req, res) => {
   });
 
 // Route to delete a post
-router.delete('/posts/:id', async (req, res) => {
-  const { id } = req.params;
 
-  try {
-    const post = await Post.findByPk(id);
-    if (!post) {
-      return res.status(404).json({ message: 'Post not found' });
+router.delete('/users/:userId/posts', async (req, res) => {
+    const { userId } = req.params;
+  
+    try {
+      
+      const user = await User.findByPk(userId);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      const post = await Post.findOne({
+        where: { userId },
+        order: [['createdAt', 'DESC']] 
+      });
+  
+      if (!post) {
+        return res.status(404).json({ message: 'No posts found for this user' });
+      }
+  
+      
+      await post.destroy();
+      res.status(204).send(); 
+    } catch (error) {
+      res.status(500).json({ error: error.message });
     }
-
-    await post.destroy();
-    res.status(204).send();
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+  });
+  
 
 module.exports = router;
