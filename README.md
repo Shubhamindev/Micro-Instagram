@@ -1,7 +1,7 @@
 # Micro-Instagram Backend
 ``` This is the API for ChefKart, a platform for managing users and posts. It allows for CRUD (Create, Read, Update, Delete) operations on users and posts, allowing users to create posts, view posts, and manage them.```
 
-Prerequisites
+## Prerequisites
 Before you can use the API, you need the following:
 
 Node.js (v14 or higher)
@@ -11,7 +11,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone <your-repository-url>
+git clone <[your-repository-url](https://github.com/Shubhamindev/Micro-Instagram)>
 cd chefkart
 Install dependencies:
 
