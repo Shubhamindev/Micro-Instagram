@@ -6,40 +6,34 @@ Before you can use the API, you need the following:
 
 Node.js (v14 or higher)<br>
 MySQL (for the database)<br>
-Installation
-Clone this repository to your local machine:
+Dbeaver(for GUI of Database) <br>
 
-bash
+
+Clone this repository to your local machine:
 Copy code
 ```git clone https://github.com/Shubhamindev/Micro-Instagram)```
 ``` cd chefkart  ```
-Install dependencies:
-
-bash
+##  Install dependencies
 Copy code
-npm install
-Configure your database settings:
+```npm install```
 
-Update config/config.json with your MySQL connection details.
-Run database migrations:
-
-bash
+## Configure your database settings:
+Update config/config.json with your MySQL connection details.<br>
+Run database migrations:<br>
 Copy code
-npx sequelize-cli db:migrate
-Seed the database (optional for initial data):
-
-bash
+``` npx sequelize-cli db:migrate    ```
+Seed the database (optional for initial data):<br>
 Copy code
-npx sequelize-cli db:seed:all
-API Endpoints
-The API is built with Express.js and Sequelize ORM and has the following routes:
+```npx sequelize-cli db:seed:all```
+API Endpoints<br>
+The API is built with Express.js and Sequelize ORM and has the following routes:<br>
 
-1. Get All Users
-Method: GET
-Endpoint: /api/users
-Description: Fetch all users from the database.
-Example Response:
-json
+## 1. Get All Users
+Method: GET<br>
+Endpoint: /api/users<br>
+Description: Fetch all users from the database.<br>
+Example Response:<br>
+json<br>
 Copy code
 [
   {
@@ -48,14 +42,14 @@ Copy code
     "email": "john@example.com",
     "post_count": 0
   }
-]
-2. Get All Posts
-Method: GET
-Endpoint: /api/posts
-Description: Fetch all posts, including associated user data.
-Example Response:
-json
-Copy code
+]<br>
+## 2. Get All Posts<br>
+Method: GET<br>
+Endpoint: /api/posts<br>
+Description: Fetch all posts, including associated user data.<br>
+Example Response:<br>
+json<br>
+Copy code<br>
 [
   {
     "id": 1,
@@ -67,8 +61,8 @@ Copy code
       "name": "John Doe"
     }
   }
-]
-3. Create a Post for a User
+]<br>
+## 3. Create a Post for a User
 Method: POST
 
 Endpoint: /api/users/:userId/posts
