@@ -63,93 +63,93 @@ Copy code<br>
   }
 ]<br>
 ## 3. Create a Post for a User
-Method: POST
+Method: POST<br>
 
-Endpoint: /api/users/:userId/posts
+Endpoint: /api/users/:userId/posts<br>
 
-Replace :userId with an actual userId from your database.
-Body (JSON):
+Replace :userId with an actual userId from your database.<br>
+Body (JSON):<br>
 
-json
+json<br>
 Copy code
 {
   "title": "New Post Title",
   "description": "New Post Description",
   "images": ["image1.jpg", "image2.jpg"]
-}
-Description: Creates a new post for a specific user. The userId is passed in the URL.
+}<br>
+Description: Creates a new post for a specific user. The userId is passed in the URL.<br>
 
-Example Response:
+Example Response:<br>
 
-json
-Copy code
+json<br>
+Copy code<br>
 {
   "id": 2,
   "title": "New Post Title",
   "description": "New Post Description",
   "images": ["image1.jpg", "image2.jpg"],
   "userId": 1
-}
-4. Edit an Existing Post
-Method: PUT
+}<br>
+## 4. Edit an Existing Post<br>
+Method: PUT<br>
 
-Endpoint: /api/posts/:id
+Endpoint: /api/posts/:id<br>
 
-Replace :id with the post ID you want to update.
-Body (JSON):
+Replace :id with the post ID you want to update.<br>
+Body (JSON):<br>
 
-json
-Copy code
+json<br>
+Copy code<br>
 {
   "title": "Updated Post Title",
   "description": "Updated Post Description",
   "images": ["updated_image.jpg"]
-}
-Description: Updates the details of an existing post.
+}<br>
+Description: Updates the details of an existing post.<br>
 
-Example Response:
+Example Response:<br>
 
-json
-Copy code
+json<br>
+Copy code<br>
 {
   "id": 2,
   "title": "Updated Post Title",
   "description": "Updated Post Description",
   "images": ["updated_image.jpg"]
-}
-5. Delete a Post
-Method: DELETE
+}<br>
+## 5. Delete a Post
+Method: DELETE<br>
 
-Endpoint: /api/posts/:id
+Endpoint: /api/posts/:id<br>
 
-Replace :id with the post ID you want to delete.
-Description: Deletes a post from the database.
+Replace :id with the post ID you want to delete.<br>
+Description: Deletes a post from the database.<br>
 
-Example Response:
+Example Response:<br>
 
-Status: 204 No Content
-Running the Application
-To run the application locally, use the following command:
+Status: 204 No Content<br>
+Running the Application<br>
+## To run the application locally, use the following command:<br>
 
-bash
+bash<br>
 Copy code
-npm start
-The server will start on http://localhost:3000.
+```npm start```
+The server will start on ```http://localhost:3000.```
 
-Testing the API
-You can test the API using tools like Postman or cURL.
+## Testing the API
+You can test the API using tools like Postman or cURL.<br>
 
-Here are the endpoints you can test:
+Here are the endpoints you can test:<br>
 
-Get All Users: GET http://localhost:3000/api/users
-Get All Posts: GET http://localhost:3000/api/posts
-Create a Post: POST http://localhost:3000/api/users/:userId/posts
-Edit a Post: PUT http://localhost:3000/api/posts/:id
-Delete a Post: DELETE http://localhost:3000/api/posts/:id
-Error Handling
-The API returns appropriate HTTP status codes and error messages for failed requests.
+Get All Users: GET ```http://localhost:3000/api/users```<br>
+Get All Posts: GET ```http://localhost:3000/api/posts```<br>
+Create a Post: POST ```http://localhost:3000/api/users/:userId/posts```<br>
+Edit a Post: PUT ```http://localhost:3000/api/posts/:id```<br>
+Delete a Post: ```DELETE http://localhost:3000/api/posts/:id```<br>
+## Error Handling<br>
+The API returns appropriate HTTP status codes and error messages for failed requests.<br>
 
-404 Not Found: When a user or post is not found.
-500 Internal Server Error: When something goes wrong on the server side.
-License
+404 Not Found: When a user or post is not found.<br>
+500 Internal Server Error: When something goes wrong on the server side.<br>
+## License<br>
 This project is licensed under the MIT License - see the LICENSE file for details.
