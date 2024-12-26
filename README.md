@@ -7,7 +7,7 @@ Before you can use the API, you need the following:
 Node.js (v14 or higher)<br>
 MySQL (for the database)<br>
 Dbeaver(for GUI of Database) <br>
-
+PostMan(To Check the API)<br>
 
 Clone this repository to your local machine:
 Copy code
