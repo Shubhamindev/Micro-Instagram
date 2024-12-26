@@ -178,9 +178,9 @@ Here are the endpoints you can test:<br>
 
 Get All Users: GET ```http://localhost:3000/api/users```<br>
 Get All Posts: GET ```http://localhost:3000/api/posts```<br>
-Create a Post: POST ```http://localhost:3000/api/users/:userId/posts```<br>
-Edit a Post: PUT ```http://localhost:3000/api/posts/:id```<br>
-Delete a Post: ```DELETE http://localhost:3000/api/posts/:id```<br>
+Create a Post: POST ```http://localhost:3000/api/users/1/posts```<br>
+Edit a Post: PUT ```http://localhost:3000/api/users/1/posts```<br>
+Delete a Post: DELETE```http://localhost:3000/api/users/1/posts```<br>
 Get Post of Specific User: GET ```http://localhost:3000/api/users/1/posts```<br>
 ## Error Handling<br>
 The API returns appropriate HTTP status codes and error messages for failed requests.<br>
