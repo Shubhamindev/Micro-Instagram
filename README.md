@@ -188,4 +188,4 @@ The API returns appropriate HTTP status codes and error messages for failed requ
 404 Not Found: When a user or post is not found.<br>
 500 Internal Server Error: When something goes wrong on the server side.<br>
 ## License<br>
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GNU License 
