@@ -9,13 +9,13 @@ MySQL (for the database)<br>
 Dbeaver(for GUI of Database) <br>
 PostMan(To Check the API)<br>
 
-Clone this repository to your local machine:
-Copy code
-```git clone https://github.com/Shubhamindev/Micro-Instagram)```
-``` cd chefkart  ```
+Clone this repository to your local machine:<br>
+Copy code<br>
+```git clone https://github.com/Shubhamindev/Micro-Instagram)```<br>
+``` cd chefkart  ```<br>
 ##  Install dependencies
-Copy code
-```npm install```
+Copy code<br>
+```npm install```<br>
 
 ## Configure your database settings:
 Update config/config.json with your MySQL connection details.<br>
