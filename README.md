@@ -20,11 +20,11 @@ Copy code<br>
 ## Configure your database settings:
 Update config/config.json with your MySQL connection details.<br>
 Run database migrations:<br>
-Copy code
-``` npx sequelize-cli db:migrate    ```
+Copy code<br>
+``` npx sequelize-cli db:migrate    ```<br>
 Seed the database (optional for initial data):<br>
-Copy code
-```npx sequelize-cli db:seed:all```
+Copy code<br>
+```npx sequelize-cli db:seed:all```<br>
 API Endpoints<br>
 The API is built with Express.js and Sequelize ORM and has the following routes:<br>
 
@@ -34,7 +34,6 @@ Endpoint: /api/users<br>
 Description: Fetch all users from the database.<br>
 Example Response:<br>
 json<br>
-Copy code
 [
   {
     "id": 1,
@@ -49,7 +48,6 @@ Endpoint: /api/posts<br>
 Description: Fetch all posts, including associated user data.<br>
 Example Response:<br>
 json<br>
-Copy code<br>
 [
   {
     "id": 1,
@@ -71,7 +69,6 @@ Replace :userId with an actual userId from your database.<br>
 Body (JSON):<br>
 
 json<br>
-Copy code
 {
   "title": "New Post Title",
   "description": "New Post Description",
@@ -82,7 +79,6 @@ Description: Creates a new post for a specific user. The userId is passed in the
 Example Response:<br>
 
 json<br>
-Copy code<br>
 {
   "id": 2,
   "title": "New Post Title",
@@ -99,7 +95,6 @@ Replace :id with the post ID you want to update.<br>
 Body (JSON):<br>
 
 json<br>
-Copy code<br>
 {
   "title": "Updated Post Title",
   "description": "Updated Post Description",
@@ -110,7 +105,6 @@ Description: Updates the details of an existing post.<br>
 Example Response:<br>
 
 json<br>
-Copy code<br>
 {
   "id": 2,
   "title": "Updated Post Title",
@@ -123,7 +117,6 @@ Endpoint: GET /api/users/:userId/posts <br>
 Description: Fetch all posts for a specific user by their userId.<br>
 Response:<br>
 json<br>
-Copy code<br>
 [
   {
     "id": 1,
@@ -167,9 +160,10 @@ Running the Application<br>
 ## To run the application locally, use the following command:<br>
 
 bash<br>
-Copy code
-```npm start```
-The server will start on ```http://localhost:3000.```
+Copy code<br/>
+```npm start``` or ```node server.js```<br>
+The server will start on ```http://localhost:3000.```<br>
+
 
 ## Testing the API
 You can test the API using tools like Postman or cURL.<br>
@@ -184,7 +178,6 @@ Delete a Post: DELETE```http://localhost:3000/api/users/1/posts```<br>
 Get Post of Specific User: GET ```http://localhost:3000/api/users/1/posts```<br>
 ## Error Handling<br>
 The API returns appropriate HTTP status codes and error messages for failed requests.<br>
-
 404 Not Found: When a user or post is not found.<br>
 500 Internal Server Error: When something goes wrong on the server side.<br>
 ## License<br>
