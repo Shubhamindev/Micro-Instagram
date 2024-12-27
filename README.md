@@ -1,9 +1,7 @@
 # Micro-Instagram Backend
 ``` This is the Micro-Instagram-Backend for ChefKart, a platform for managing users and posts. It allows for CRUD (Create, Read, Update, Delete) operations on users and posts, allowing users to create posts, view posts, and manage them.```
 
-## Watch the demo video here:
 
-[![Watch the video](https://img.youtube.com/vi/TV-LgAkUz0Y/0.jpg)](https://youtu.be/TV-LgAkUz0Y)
 
 ## Prerequisites
 Before you can use the API, you need the following:
@@ -184,5 +182,10 @@ Get Post of Specific User: GET ```http://localhost:3000/api/users/1/posts```<br>
 The API returns appropriate HTTP status codes and error messages for failed requests.<br>
 404 Not Found: When a user or post is not found.<br>
 500 Internal Server Error: When something goes wrong on the server side.<br>
+
+## Watch the demo video here:
+
+[![Watch the video](https://img.youtube.com/vi/TV-LgAkUz0Y/0.jpg)](https://youtu.be/TV-LgAkUz0Y)
+
 ## License<br>
 This project is licensed under the GPL License 
