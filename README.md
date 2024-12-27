@@ -1,5 +1,5 @@
 # Micro-Instagram Backend
-``` This is the API for ChefKart, a platform for managing users and posts. It allows for CRUD (Create, Read, Update, Delete) operations on users and posts, allowing users to create posts, view posts, and manage them.```
+``` This is the Micro-Instagram-Backend for ChefKart, a platform for managing users and posts. It allows for CRUD (Create, Read, Update, Delete) operations on users and posts, allowing users to create posts, view posts, and manage them.```
 
 ## Prerequisites
 Before you can use the API, you need the following:
